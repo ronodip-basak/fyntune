@@ -97,11 +97,7 @@
 
         const baseUrl = `{{ route('userData.search') }}`; 
         const searchUrl = baseUrl + `?search=${encodeURI(query)}`;
-        fetch(`${searchUrl}`, {
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
+        fetch(`${searchUrl}`)
             .then(response => response.json())
             .then(response => {
                 let html = '';

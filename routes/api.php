@@ -24,4 +24,3 @@ Route::get('/load_questions/{test}', ['App\Http\Controllers\TestController', 're
 
 Route::post('/select_answer/{answer}', ['App\Http\Controllers\AnswerController', 'markAsSelected'])->name('answer.markAsSelected');
 
-Route::get('/user_data', ['App\Http\Controllers\UserDataController', 'search'])->middleware('auth')->name('userData.search');

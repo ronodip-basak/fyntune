@@ -31,3 +31,5 @@ Route::get('/admin', ['App\Http\Controllers\TestController', 'adminIndex'])->mid
 Route::get('/login', ['App\Http\Controllers\UserController', 'login'])->name('login');
 
 Route::post('/login', ['App\Http\Controllers\UserController', 'loginSubmit'])->name('loginSubmit');
+
+Route::get('/user_data', ['App\Http\Controllers\UserDataController', 'search'])->middleware('auth')->name('userData.search');
